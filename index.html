@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swiggy UI – Bulma + Bootstrap</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bulma -->
+  <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f5f5f5;
+    }
+    .category img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
+    .restaurant-card img {
+      height: 160px;
+      object-fit: cover;
+    }
+    .hero-swiggy {
+    background-color: #ff4d00;
+    padding: 40px 0 60px;
+    color: white;
+    }
+    .navbar-item img {
+    max-height: none !important; 
+    }
+    /* navbar */
+    .hero-navbar {
+    background: transparent;
+    }
+    .hero-navbar .navbar-item {
+    color: white;
+    font-weight: 500;
+    }
+
+    /* heading */
+    .hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.3;
+    }
+
+    /* individual white box */
+    .search-card {
+    background: white;
+    border-radius: 14px;
+    padding: 10px 14px;
+    width: 280px;
+    }
+
+    /* second box wider */
+    .search-wide {
+    width: 420px;
+    }
+
+    /* input styling */
+    .search-input {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 15px;
+    }
+
+    /* focus remove */
+    .search-input:focus {
+    box-shadow: none;
+    }
+
+    .swiggy-logo {
+    height: 100px;   
+    width: auto;    
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🔶 Navbar (Bulma) -->
+<section class="hero-swiggy">
+
+  <!-- 🔹 NAVBAR -->
+  <nav class="navbar hero-navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item d-flex align-items-center gap-2">
+          <img src="swiggy_logo_white.avif" alt="Swiggy-logo" style="height:100px;">
+        </a>
+       </div>
+
+      <div class="d-flex align-items-center gap-4">
+        <a class="nav-link text-white fw-bold">Swiggy Corporate</a>
+          <a class="nav-link text-white fw-bold">Partner with us</a>
+            <a class="navbar-item button is-warning is-light">Get the App</a>
+              <a class="navbar-item button is-dark">Sign in</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🔹 HERO CONTENT -->
+  <div class="container has-text-centered mt-6">
+    <h1 class="hero-title">
+      Order food & groceries.<br>
+      Discover best restaurants. Swiggy it!
+    </h1>
+
+    <!-- 🔹 SEARCH -->
+    <div class="container mt-5">
+      <div class="d-flex justify-content-center gap-3">
+
+    <!-- Location box -->
+        <div class="search-card">
+          <input
+            type="text"
+            class="form-control search-input"
+            placeholder= "Enter your delivery location">
+        </div>
+
+    <!-- Search box -->
+          <div class="search-card search-wide">
+            <input
+            type="text"
+            class="form-control search-input"
+            placeholder="Search for restaurant, item or more                           🔍">
+          </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🔶 Categories -->
+<section class="section">
+  <h2 class="title is-3">What's on your mind?</h2>
+
+  <div class="columns is-mobile is-multiline has-text-centered">
+    <div class="column is-2 category">
+      <img src="Biryani.avif">
+    </div>
+    <div class="column is-2 category">
+      <img src="burger.avif">
+    </div>
+    <div class="column is-2 category">
+      <img src="icecream.avif">
+    </div>
+    <div class="column is-2 category">
+      <img src="Khichdi.avif">
+    </div>
+    <div class="column is-2 category">
+      <img src="Momos.avif">
+    </div>
+    <div class="column is-2 category">
+      <img src="cake.avif">
+    </div>
+  </div>
+</section>
+
+<!-- 🔶 Restaurants (Bootstrap Grid) -->
+<section class="section">
+  <h2 class="title is-3">Top restaurant chains</h2>
+
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card restaurant-card">
+          <div class="card-image">
+            <figure class="image">
+              <img src="pizza.avif">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-5">Pizza Hut</p>
+            <p>⭐ 4.2 · 30–35 mins</p>
+            <p>Pizza,FastFood, Shivajinagar</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card restaurant-card">
+          <div class="card-image">
+            <figure class="image">
+              <img src="burgerKing.avif">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-5">McDonald's</p>
+            <p>⭐ 4.5 · 20–25 mins</p>
+            <p>Burger, American, Shivajinagar</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card restaurant-card">
+          <div class="card-image">
+            <figure class="image">
+              <img src="noodles.avif">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-5">Noodles</p>
+            <p>⭐ 4.3 · 35–40 mins</p>
+            <p>Chinese, Asian, Shivajinagar</p>
+          </div>
+        </div>
+      </div>
+  <!-- Card 4 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card restaurant-card">
+          <div class="card-image">
+            <figure class="image">
+              <img src="garvabiryani.avif">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-5">Garva Biryani</p>
+            <p>⭐ 4.3 · 35–40 mins</p>
+            <p>Biryani, North Indian, Shivajinagar</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card restaurant-card">
+          <div class="card-image">
+            <figure class="image">
+              <img src="thali.avif">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-5">Thali</p>
+            <p>⭐ 4.3 · 35–40 mins</p>
+            <p>Thali, North Indian, Prabhas Road</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card restaurant-card">
+          <div class="card-image">
+            <figure class="image">
+              <img src="pavbhaji.avif">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-5">Pav-Bhaji</p>
+            <p>⭐ 4.3 · 35–40 mins</p>
+            <p>Pav-Bhaji, South Indian, Shivajinagar</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 7 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card restaurant-card">
+          <div class="card-image">
+            <figure class="image">
+              <img src="dosa.avif">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-5">Dosa</p>
+            <p>⭐ 4.3 · 35–40 mins</p>
+            <p>Dosa, South Indian, Shivajinagar</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 8 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card restaurant-card">
+          <div class="card-image">
+            <figure class="image">
+              <img src="cafecholate.avif">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-5">Cafe Chocolate</p>
+            <p>⭐ 4.3 · 35–40 mins</p>
+            <p>Deserts, VastuPark, Shivajinagar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+</body>
+</html>
+
